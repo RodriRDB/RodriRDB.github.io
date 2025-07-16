@@ -1,0 +1,311 @@
+/* Variables CSS */
+:root {
+  --color-primario: #001f8b;
+  --color-secundario: #4f5be0;
+  --color-accento: #1abc9c;
+  --color-fondo: #f4f6fb;
+  --color-texto: #212529;
+  --color-blanco: #ffffff;
+  --color-sombra: rgba(0, 0, 0, 0.1);
+
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transicion-base: all 0.3s ease;
+}
+
+/* ESTILOS GENERALES  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6fb;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(90deg, #001f8b, #4f5be0);
+    color: white;
+    padding: 20px;
+}
+
+.encabezado-contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-y-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-y-titulo img {
+    height: 50px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+}
+
+.titulo-pagina {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.barra-busqueda {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.barra-busqueda input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barra-busqueda button {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    color: #001f8b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.barra-busqueda button:hover {
+    background-color: #cfd8ff;
+}
+
+/*  NAVBAR  */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #001a66;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3048d4;
+}
+
+/*  BANNER */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.mensaje-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*  SECCIÓN BIENVENIDA  */
+.bienvenida {
+    padding: 30px;
+    background-color: #e9f0ff;
+    margin: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boton-cta {
+    padding: 10px 20px;
+    background-color: #001f8b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.boton-cta:hover {
+    background-color: #3048d4;
+}
+
+/*  CARRUSEL  */
+.carrusel-seccion {
+    overflow: hidden;
+    background: linear-gradient(135deg, #cfe3ff, #a1c4fd);
+    padding: 40px 0;
+}
+
+.carrusel-contenedor {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carrusel-slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slide-infinito 25s infinite linear;
+}
+
+.carrusel-slide {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel-contenido {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+}
+
+.carrusel-boton {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #001f8b;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.carrusel-boton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes slide-infinito {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    45% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    70% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    95% { transform: translateX(-60%); }
+    100% { transform: translateX(-80%); }
+}
+
+/*  CONTENIDO DESTACADO  */
+.contenido-destacado {
+    text-align: center;
+    padding: 30px;
+    background-color: #f7faff;
+}
+
+.seccion-destacada {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    text-align: center;
+}
+
+.seccion-destacada img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.seccion-destacada h3 {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/*  FOOTER  */
+footer {
+    background-color: #001f8b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #bcd4ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* SALUDO  */
+#saludo {
+    text-align: center;
+    font-size: 1.5em;
+    color: #001f8b;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 768px) {
+    .encabezado-contenedor, nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra-busqueda input,
+    .barra-busqueda button {
+        width: 90%;
+    }
+
+    .carrusel-contenido h3 {
+        font-size: 1.4em;
+    }
+
+    .seccion-destacada {
+        width: 90%;
+    }
+
+    .cta {
+        flex-direction: column;
+    }
+}

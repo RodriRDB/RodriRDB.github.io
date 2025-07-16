@@ -1,0 +1,472 @@
+/* Variables CSS */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #34495e;
+    --color-accento: #8e6c88;
+    --color-destacado: #e74c3c;
+    --color-texto: #333;
+    --color-fondo: #f9f7f4;
+    --color-borde: #d4c8be;
+    --color-blanco: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+    --transicion: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', Georgia, serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 30px var(--color-sombra);
+    overflow: hidden;
+}
+
+/* Encabezado */
+.encabezado {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    background: url('Imagenes/fondo-header.webp') center/cover no-repeat;
+    color: var(--color-blanco);
+    padding: 2rem;
+    position: relative;
+}
+
+.logo-y-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: var(--transicion);
+}
+
+.logo-y-titulo:hover {
+    transform: translateY(-10px);
+}
+
+.logo-contenedor img {
+    height: 120px;
+    width: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    transition: var(--transicion);
+}
+
+.logo-contenedor img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.titulo-contenedor h1 {
+    font-size: 3rem;
+    color: var(--color-blanco);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.titulo-contenedor h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #d3d3d3;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(142, 108, 136, 0.3);
+    transition: var(--transicion);
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--color-accento);
+    transform: translateY(-3px);
+}
+
+/* Fecha */
+.fecha-seccion {
+    text-align: right;
+    padding: 10px 30px;
+    font-size: 0.9em;
+    color: #777;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Etimología Section */
+.etimologia-section {
+    padding: 40px 30px;
+}
+
+.etimologia-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.palabras-panel, .etimologia-panel {
+    background: var(--color-blanco);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+}
+
+.palabras-panel h2, .etimologia-panel h2 {
+    font-size: 1.8rem;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.palabras-panel h2::after, .etimologia-panel h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accento);
+    margin-top: 10px;
+}
+
+.buscador {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: var(--transicion);
+}
+
+.buscador input:focus {
+    border-color: var(--color-accento);
+    outline: none;
+}
+
+.buscador-icono {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-accento);
+}
+
+.lista-palabras {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.palabra-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transicion);
+}
+
+.palabra-item:hover {
+    background: var(--color-accento);
+    color: var(--color-blanco);
+    transform: translateX(5px);
+}
+
+.palabra-item.selected {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.etimologia-contenido {
+    min-height: 200px;
+    padding: 15px;
+    background: #f8f4f7;
+    border-radius: 4px;
+    transition: opacity 0.5s ease;
+}
+
+.etimologia-contenido h3 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+/* Pagination */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    background: var(--color-accento);
+    color: var(--color-blanco);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+.paginacion button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.paginacion span {
+    font-size: 1rem;
+    color: var(--color-primario);
+}
+
+/* Video Container */
+.video-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+}
+
+/* Características */
+.caracteristicas {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.titulo-centrado {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.titulo-centrado::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-accento);
+    margin: 10px auto;
+}
+
+.botones-caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-accento);
+    color: var(--color-blanco);
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.boton:hover {
+    background: var(--color-primario);
+    transform: translateY(-3px);
+}
+
+/* Acceso Rápido */
+.acceso-rapido {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.tabla-acceso {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px var(--color-sombra);
+}
+
+.tabla-acceso th, .tabla-acceso td {
+    padding: 15px;
+    text-align: left;
+}
+
+.tabla-acceso th {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+}
+
+.tabla-acceso tr:nth-child(even) {
+    background: #f8f4f7;
+}
+
+.tabla-acceso tr:hover {
+    background: var(--color-accento);
+    color: var(--color-blanco);
+}
+
+.tabla-icono {
+    font-size: 1.2rem;
+}
+
+.enlace-tabla {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.enlace-tabla:hover {
+    color: var(--color-destacado);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: 60px 30px 30px;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-seccion h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer-seccion h4::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accento);
+    margin-top: 10px;
+}
+
+.footer-seccion a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-seccion a:hover {
+    color: var(--color-accento);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.etimologia-section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.encabezado {
+    animation: slideDown 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .etimologia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .palabras-panel, .etimologia-panel {
+        margin-bottom: 20px;
+    }
+
+    .titulo-contenedor h1 {
+        font-size: 2.2rem;
+    }
+
+    .titulo-contenedor h2 {
+        font-size: 1.3rem;
+    }
+
+    .nav-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-contenedor h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-contenedor img {
+        height: 80px;
+    }
+
+    .paginacion button {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+}

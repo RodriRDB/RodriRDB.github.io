@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Explora el saber</title>
+    <link rel="stylesheet" href="StylesContacto.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagenes/logo.png" alt="Logo de Explora el saber">
+            <h1>Explorar el saber</h1>
+        </div>
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Escribe el nombre del libro o revista">
+            <button type="submit">Buscar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pagina_inicio.html">Inicio</a></li>
+                <li><a href="diccionarios.html">Diccionarios</a></li>
+                <li><a href="editorial.html">Editoriales</a></li>
+                <li><a href="enciclopedias.html">Enciclopedias</a></li>
+                <li><a href="libreria.html">Librerías</a></li>
+                <li><a href="inicio_sesion.html">Acceso</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="contacto-seccion">
+            <h2 class="titulo-contacto">Contáctenos</h2>
+          
+            <div class="info-contacto">
+              <div>
+                <strong>Escríbenos:</strong>
+                <p>Puedes escribirnos a nuestro <br>atencionalcliente@exploraelsaber.com</p>
+              </div>
+              <div>
+                <strong>Atención al cliente:</strong>
+                <p>Estamos disponibles para ayudar<br>llámanos al +51988502587</p>
+              </div>
+              <div>
+                <strong>FAQ:</strong>
+                <p>Encuentra la respuesta a las preguntas frecuentes</p>
+              </div>
+            </div>
+          
+            <hr>
+          
+            <form class="formulario-contacto">
+              <h3>Completa tus datos y nos podremos en contacto contigo:</h3>
+          
+              <div class="form-grid">
+                <div>
+                  <label for="nombre">Nombre*</label>
+                  <input type="text" id="nombre" required>
+                </div>
+          
+                <div>
+                  <label for="correo">Correo electrónico*</label>
+                  <input type="email" id="correo" required>
+                </div>
+          
+                <div>
+                  <label for="telefono">Número de teléfono</label>
+                  <input type="tel" id="telefono">
+                </div>
+          
+                <div>
+                  <label for="mensaje">¿En qué podemos ayudarte?*</label>
+                  <textarea id="mensaje" rows="4" required></textarea>
+                </div>
+              </div>
+          
+              <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+
+
+        <section class="contacto-seccion">
+            <h2 class="titulo-contacto">Ubicanos</h2>
+            <div class="info-contacto-mapa">
+                <div class="datos-contacto">
+                    <p>📍 <strong>Dirección:</strong> Calle Peru, Arequipa, Perú</p>
+                    <p>📞 <strong>Teléfono:</strong> +51 988 502 587</p>
+                    <p>📧 <strong>Email:</strong> atencionalcliente@exploraelsaber.com</p>
+                </div>
+            </div>
+
+            <div class="mapa-contacto">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d286.2477989004365!2d-71.5342173276613!3d-16.40270901332273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a57c9fb50e7%3A0x6c8d1f5e4df5167!2sC.%20Per%C3%BA%2C%20Arequipa%2004001!5e1!3m2!1ses-419!2spe!4v1748421350172!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+          <div class="footer-columna">
+            <h4>Sobre Explora el Saber</h4>
+            <ul>
+              <li><span class="check">✓</span> <a href="quienesSomos.html">Quiénes somos</a></li>
+              <li><span class="check">✓</span> <a href="#">Trabaja con nosotros</a></li>
+              <li><span class="check">✓</span> <a href="#">Nuestras Librerías</a></li>
+              <li><span class="check">✓</span> Central Telefónica: (01) 206-4900</li>
+              <li><span class="check">✓</span> Horario: Lunes a Viernes de 8:00 a.m. a 5:30 p.m.</li>
+              <li><span class="check">✓</span> WhatsApp: 989281555</li>
+            </ul>
+          </div>
+      
+          <div class="footer-columna">
+            <h4>Productos y Servicios</h4>
+            <ul>
+              <li><span class="check">✓</span> <a href="#">Blog Explora Educación</a></li>
+              <li><span class="check">✓</span> <a href="#">Editoriales Asociadas</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-columna">
+            <h4>Políticas de Privacidad</h4>
+            <ul>
+              <li><span class="check">✓</span> <a href="terminosycondiciones.html">Términos y Condiciones</a></li>
+              <li><span class="check">✓</span> <a href="politica.html">Política de Ventas</a></li>
+              <li><span class="check">✓</span> <a href="privacidad.html">Privacidad y Seguridad</a></li>
+              <li><span class="check">✓</span> <a href="cookies.html">Política de Cookies</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-columna">
+            <h4>Atención al Cliente</h4>
+            <ul>
+              <li><span class="check">✓</span> <a href="#">Atención al Cliente</a></li>
+              <li><span class="check">✓</span> <a href="libroReclamaciones.html">Libro de Reclamaciones</a></li>
+              <li><span class="check">✓</span> <a href="#">Comprobantes Electrónicos</a></li>
+              <li><span class="check">✓</span> <a href="#">Contáctenos</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-extra">
+          <div class="certificados">
+            <h5>Certificados</h5>
+            <img src="img-contactos/visaa.webp" alt="Verified by VISA">
+          </div>
+      
+          <div class="formas-pago">
+            <h5>Formas de pago</h5>
+            <img src="img-contactos/pagos.webp" alt="Visa">
+          </div>
+      
+          <div class="libro-reclamaciones">
+            <h5>Libro de Reclamaciones</h5>
+            <img src="img-contactos/libro.webp" alt="Libro de reclamaciones">
+          </div>
+      
+          <div class="redes-sociales">
+            <h5>¡Síguenos!</h5>
+            <a href="#"><img src="img-contactos/facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="img-contactos/instagram.jfif" alt="Instagram"></a>
+          </div>
+        </div>
+        <div class="footer-bo">
+            <p>© 2025 Explora el saber. <a href="contacto.html">Contacto</a> | <a href="#">Redes Sociales</a></p>
+        </div>
+          
+      </footer>
+</body>
+</html>

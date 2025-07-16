@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el Saber: Lee libros gratis o cómpralos para tu colección personal.">
+    <title>Libros Gratis y Compras - Explora el Saber</title>
+    <link rel="stylesheet" href="Stylelibreria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="logo-y-titulo">
+                <div class="logo-contenedor">
+                    <img src="Imagenes/logo2.png" alt="Logo Explora el Saber" class="logo-seccion">
+                </div>
+                <div class="titulo-contenedor">
+                    <h1>Explora el Saber</h1>
+                    <h2>Biblioteca Digital</h2>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-lista">
+                    <li class="nav-item"><a href="pagina_inicio.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="diccionarios.html" class="nav-link">Diccionarios</a></li>
+                    <li class="nav-item"><a href="editorial.html" class="nav-link">Editoriales</a></li>
+                    <li class="nav-item"><a href="enciclopedias.html" class="nav-link">Enciclopedias</a></li>
+                    <li class="nav-item"><a href="librerias.html" class="nav-link active">Biblioteca</a></li>
+                    <li class="nav-item"><a href="inicio_sesion.html" class="nav-link">Acceso</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+        </header>
+
+        <div class="fecha-seccion">
+            <span id="fecha-actual">Fecha: 02/07/2025</span>
+        </div>
+
+        <section class="intro-section">
+            <div class="intro-moderno">
+                <h3 class="intro-titulo">Tesoros Literarios</h3>
+                <p>Explora nuestra colección de libros gratuitos o cómpralos para tu biblioteca personal. Desde clásicos atemporales hasta historias cautivadoras, encuentra tu próxima aventura lectora.</p>
+                <div class="destacado-libro">
+                    <p>📚 <strong>Libro destacado:</strong> "Don Quijote de la Mancha" - La obra cumbre de la literatura española</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="libros-grid">
+            <article class="libro-card" data-libro="moby-dick" data-precio="12.99">
+                <div class="libro-portada">
+                    <img src="img-libros/Moby_Dick.jpg" alt="Moby Dick" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>La épica historia de la obsesión del capitán Ahab con la ballena blanca</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Moby Dick</h4>
+                <p class="libro-autor">Herman Melville</p>
+                <p class="libro-precio">$12.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/2701" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('moby-dick', 'Moby Dick', 12.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="cien-anos-soledad" data-precio="15.99">
+                <div class="libro-portada">
+                    <img src="img-libros/cien-años-de-soledad.jpeg" alt="Cien años de soledad" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>La saga de la familia Buendía en el mítico pueblo de Macondo</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Cien años de soledad</h4>
+                <p class="libro-autor">Gabriel García Márquez</p>
+                <p class="libro-precio">$15.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.cervantesvirtual.com/" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('cien-anos-soledad', 'Cien años de soledad', 15.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card libro-destacado" data-libro="quijote" data-precio="14.99">
+                <div class="libro-portada">
+                    <img src="img-libros/quijote.jpeg" alt="Don Quijote de la Mancha" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>Las aventuras del ingenioso hidalgo y su fiel escudero Sancho Panza</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Don Quijote</h4>
+                <p class="libro-autor">Miguel de Cervantes</p>
+                <p class="libro-precio">$14.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/2000" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('quijote', 'Don Quijote', 14.99)">Añadir al Carrito</button>
+                    <div class="destacado-badge">⭐ Recomendado</div>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="metamorfosis" data-precio="10.99">
+                <div class="libro-portada">
+                    <img src="img-libros/metamorfosis.jpeg" alt="La Metamorfosis" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>Gregorio Samsa despierta convertido en un monstruoso insecto</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">La Metamorfosis</h4>
+                <p class="libro-autor">Franz Kafka</p>
+                <p class="libro-precio">$10.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/5200" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('metamorfosis', 'La Metamorfosis', 10.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="orgullo-prejuicio" data-precio="11.99">
+                <div class="libro-portada">
+                    <img src="img-libros/orgullo-y-prejuicio.jpeg" alt="Orgullo y Prejuicio" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>La historia de Elizabeth Bennet y el señor Darcy en la Inglaterra rural</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Orgullo y Prejuicio</h4>
+                <p class="libro-autor">Jane Austen</p>
+                <p class="libro-precio">$11.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/1342" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('orgullo-prejuicio', 'Orgullo y Prejuicio', 11.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="crimen-castigo" data-precio="13.99">
+                <div class="libro-portada">
+                    <img src="img-libros/crimen-y-castigo.jpeg" alt="Crimen y Castigo" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>El drama psicológico de Raskólnikov tras cometer un crimen</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Crimen y Castigo</h4>
+                <p class="libro-autor">Fiódor Dostoievski</p>
+                <p class="libro-precio">$13.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/2554" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('crimen-castigo', 'Crimen y Castigo', 13.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="dorian-gray" data-precio="12.49">
+                <div class="libro-portada">
+                    <img src="img-libros/retrato de dorina gray.jpeg" alt="El retrato de Dorian Gray" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>Un joven conserva su juventud mientras su retrato envejece</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">El retrato de Dorian Gray</h4>
+                <p class="libro-autor">Oscar Wilde</p>
+                <p class="libro-precio">$12.49</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/174" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('dorian-gray', 'El retrato de Dorian Gray', 12.49)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="frankenstein" data-precio="11.49">
+                <div class="libro-portada">
+                    <img src="img-libros/frankenstein.jpeg" alt="Frankenstein" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>El científico Victor Frankenstein crea vida con consecuencias trágicas</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Frankenstein</h4>
+                <p class="libro-autor">Mary Shelley</p>
+                <p class="libro-precio">$11.49</p>
+                <div class="libro-acciones">
+                    <a href="https://www.gutenberg.org/ebooks/84" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('frankenstein', 'Frankenstein', 11.49)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="conde-montecristo" data-precio="16.99">
+                <div class="libro-portada">
+                    <img src="img-libros/el conde montecristo.webp" alt="El conde de Montecristo" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>La historia de venganza más elaborada de la literatura</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">El conde de Montecristo</h4>
+                <p class="libro-autor">Alexandre Dumas</p>
+                <p class="libro-precio">$16.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.feedbooks.com/book/123" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('conde-montecristo', 'El conde de Montecristo', 16.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+
+            <article class="libro-card" data-libro="lazarillo" data-precio="9.99">
+                <div class="libro-portada">
+                    <img src="img-libros/lazarillo de tormes.jpeg" alt="Lazarillo de Tormes" class="libro-imagen">
+                    <div class="libro-overlay">
+                        <p>Las desventuras de un pícaro en la España del siglo XVI</p>
+                    </div>
+                </div>
+                <h4 class="libro-titulo">Lazarillo de Tormes</h4>
+                <p class="libro-autor">Anónimo</p>
+                <p class="libro-precio">$9.99</p>
+                <div class="libro-acciones">
+                    <a href="https://www.cervantesvirtual.com/" class="libro-boton">Leer ahora</a>
+                    <button class="libro-boton comprar" onclick="agregarAlCarrito('lazarillo', 'Lazarillo de Tormes', 9.99)">Añadir al Carrito</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-contenido">
+                <h3>¿Listo para tu próxima aventura literaria?</h3>
+                <p>Lee gratis o compra tus libros favoritos para llevarlos contigo siempre.</p>
+                <div class="cta-botones">
+                    <a href="#quijote" class="cta-boton cta-principal">Empieza con Don Quijote</a>
+                    <button class="cta-boton cta-secundario" onclick="abrirCarrito()">Ver Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarCarrito()">&times;</span>
+                <h2>Tu Carrito</h2>
+                <div id="cart-items"></div>
+                <p id="cart-total">Total: $0.00</p>
+                <button class="cart-button" onclick="mostrarPago()">Proceder al Pago</button>
+            </div>
+        </div>
+
+        <!-- Payment Modal -->
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarPago()">&times;</span>
+                <h2>Pago</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="card-number">Número de Tarjeta</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" aria-label="Número de tarjeta">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Nombre en la Tarjeta</label>
+                        <input type="text" id="card-name" placeholder="Nombre Completo" aria-label="Nombre en la tarjeta">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-expiry">Fecha de Expiración</label>
+                        <input type="text" id="card-expiry" placeholder="MM/AA" aria-label="Fecha de expiración">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" placeholder="123" aria-label="Código CVC">
+                    </div>
+                    <button type="submit" class="cart-button">Pagar</button>
+                </form>
+                <p id="payment-error" class="error" aria-live="polite"></p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Explora el Saber</h4>
+                    <p>Tu portal de acceso al conocimiento y la cultura literaria.</p>
+                </div>
+                <div class="footer-seccion">
+                    <h4>Recursos</h4>
+                    <a href="https://www.gutenberg.org/">Proyecto Gutenberg</a>
+                    <a href="https://www.cervantesvirtual.com/">Biblioteca Cervantes</a>
+                    <a href="https://archive.org/">Internet Archive</a>
+                </div>
+                <div class="footer-seccion">
+                    <h4>Legal</h4>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Dominio público</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Explora el Saber. Todos los derechos reservados.</p>
+                <p>Los libros gratuitos son de dominio público o están disponibles legalmente en las plataformas mencionadas.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript para libreia -->
+    <script src="script-libreria.js"></script>
+
+</body>
+</html>

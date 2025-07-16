@@ -1,0 +1,237 @@
+/* RESET Y GENERALES */
+.encabezado {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Imagenes/fondo_inicio_sesion.webp');
+    background-position: center;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER Y NAVEGACIÓN */
+
+header {
+    background-color: #000ab0;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .logo-y-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img, .logo-contenedor img {
+    height: 50px;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+
+/* BOTONES COMUNES */
+
+.boton, .boton-cta {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover, .boton-cta:hover {
+    background-color: #000000;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #000247;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ESTILOS ESPECÍFICOS DE LA PÁGINA DE INICIO DE SESIÓN / CREAR CUENTA*/
+
+.contenedor-formularios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.formulario-inicio-sesion,
+.formulario-registro {
+    background-color: #e4efff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.formulario-inicio-sesion h2,
+.formulario-registro h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="password"],
+.campo-formulario input[type="email"],
+.campo-formulario input[type="number"],
+.campo-formulario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.campo-formulario select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.campo-formulario select::-ms-expand {
+    display: none;
+}
+
+.opciones-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.opciones-formulario label {
+    font-weight: normal;
+}
+
+.opciones-formulario a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.opciones-formulario a:hover {
+    text-decoration: underline;
+}
+
+.boton-acceso,
+.boton-registro {
+    background-color: #00065a; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px; 
+    font-size: 1.1em; 
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.boton-acceso:hover,
+.boton-registro:hover {
+    background-color: #0c007a;
+    transform: scale(1.02); 
+}
+
+.ir-a-registro,
+.ir-a-sesion {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.boton-alternativo {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.boton-alternativo:hover {
+    color: #0056b3;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Estilos para las opciones de selección (checkboxes y radios) */
+.opciones-seleccion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.opciones-seleccion label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opciones-seleccion input[type="checkbox"],
+.opciones-seleccion input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el Saber: Descubre enciclopedias en línea para acceder al conocimiento global de manera instantánea.">
+    <title>Enciclopedias en Línea - Explora el Saber</title>
+    <link rel="stylesheet" href="Styleenciclopediaenlinea.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="overlay">
+                <div class="logo-y-titulo">
+                    <div class="logo-contenedor">
+                        <img src="Imagenes/logo2.png" alt="Logo Enciclopedias" class="logo-seccion">
+                    </div>
+                    <div class="titulo-contenedor">
+                        <h1>Explora el Saber</h1>
+                        <h2>Enciclopedias en Línea</h2>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-lista">
+                        <li class="nav-item"><a href="pagina inicio.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="diccionarios.html" class="nav-link">Diccionarios</a></li>
+                        <li class="nav-item"><a href="editorial.html" class="nav-link">Editoriales</a></li>
+                        <li class="nav-item"><a href="enciclopedias.html" class="nav-link active">Enciclopedias</a></li>
+                        <li class="nav-item"><a href="libreria.html" class="nav-link">Librerías</a></li>
+                        <li class="nav-item"><a href="inicio_sesion.html" class="nav-link">Acceso</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="fecha-seccion">
+            <span id="fecha-actual">Fecha: 02/07/2025</span>
+        </div>
+
+        <main>
+            <section class="en-linea-section">
+                <div class="en-linea-grid">
+                    <div class="plataformas-panel">
+                        <h2>Plataformas A-Z</h2>
+                        <div class="buscador">
+                            <input type="text" id="buscar-plataforma" placeholder="Busca una plataforma..." aria-label="Buscar plataforma de enciclopedias en línea">
+                            <i class="fas fa-search buscador-icono"></i>
+                        </div>
+                        <div id="lista-plataformas" class="lista-plataformas"></div>
+                        <div class="paginacion">
+                            <button id="anterior" onclick="cambiarPagina(-1)" disabled>Anterior</button>
+                            <span id="pagina-actual">Página 1</span>
+                            <button id="siguiente" onclick="cambiarPagina(1)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="detalles-panel">
+                        <h2>Detalles de la Plataforma</h2>
+                        <div id="detalles-contenido" class="detalles-contenido" aria-live="polite">
+                            <p>Selecciona una plataforma para ver sus detalles.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Explora el Saber</h4>
+                    <p>Tu portal de conocimiento y cultura.</p>
+                </div>
+                <div class="footer-seccion">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2005-2025 Explora el Saber. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript para enciclopedias en linea-->
+    <script src="script-enciclopedia-en-linea.js"></script>
+</body>
+</html>

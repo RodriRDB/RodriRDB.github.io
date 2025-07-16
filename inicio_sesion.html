@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión O Crear Cuenta - Explora el saber</title>
+    <link rel="stylesheet" href="StyleInicioSesion.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="logo-y-titulo">
+                <div class="logo-contenedor">
+                    <img src="Imagenes/logo.png" alt="Logo de Acceso" class="logo-seccion">
+                </div>
+                <div class="titulo-contenedor">
+                    <h1>Explora el saber</h1>
+                    <h2>Inicio de Sesión / Crear Cuenta</h2>
+                </div>
+            </div>
+            
+        </header>
+
+        <main>
+            <div class="contenedor-formularios">
+                <section class="formulario-inicio-sesion">
+                    <h2>Iniciar Sesión</h2>
+                    <form id="form-inicio-sesion" method="post">
+                        <div class="campo-formulario">
+                            <label for="usuario-sesion">Usuario:</label>
+                            <input type="text" id="usuario-sesion" name="usuario" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="contrasena-sesion">Contraseña:</label>
+                            <input type="password" id="contrasena-sesion" name="contrasena" required>
+                        </div>
+                        <div class="opciones-formulario">
+                            <label><input type="checkbox" name="recordar"> Recordarme</label>
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="boton-acceso boton-vistoso">Iniciar Sesión</button>
+                        <p id="mensaje-error-sesion" style="color: red; display: none;"></p>
+                    </form>
+                    <div class="ir-a-registro">
+                        ¿No tienes cuenta? <button class="boton-alternativo" onclick="mostrarRegistro()">Crear Cuenta</button>
+                    </div>
+                </section>
+
+                <section class="formulario-registro oculto">
+                    <h2>Crear Cuenta</h2>
+                    <form id="form-registro" method="post">
+                        <div class="campo-formulario">
+                            <label for="nombres-registro">Nombres:</label>
+                            <input type="text" id="nombres-registro" name="nombres" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="apellidos-registro">Apellidos:</label>
+                            <input type="text" id="apellidos-registro" name="apellidos" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="email-registro">Email:</label>
+                            <input type="email" id="email-registro" name="email" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="usuario-registro">Usuario:</label>
+                            <input type="text" id="usuario-registro" name="usuario" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="contrasena-registro">Contraseña:</label>
+                            <input type="password" id="contrasena-registro" name="contrasena" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+                            <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="sexo-registro">Sexo:</label>
+                            <select id="sexo-registro" name="sexo">
+                                <option value="">Seleccionar</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="campo-formulario">
+                            <label for="nacimiento-registro">Año de Nacimiento:</label>
+                            <input type="number" id="nacimiento-registro" name="nacimiento" min="1900" max="2025">
+                        </div>
+                        <div class="campo-formulario">
+                            <label>Intereses:</label>
+                            <div class="opciones-seleccion">
+                                <label><input type="checkbox" name="intereses" value="ficcion"> Ficción</label>
+                                <label><input type="checkbox" name="intereses" value="ciencia"> Ciencia</label>
+                                <label><input type="checkbox" name="intereses" value="historia"> Historia</label>
+                                <label><input type="checkbox" name="intereses" value="poesia"> Poesía</label>
+                            </div>
+                        </div>
+                        <div class="campo-formulario">
+                            <label>Tipo de Cuenta:</label>
+                            <div class="opciones-seleccion">
+                                <label><input type="radio" name="tipo_cuenta" value="lector" checked> Lector</label>
+                                <label><input type="radio" name="tipo_cuenta" value="autor"> Autor</label>
+                                <label><input type="radio" name="tipo_cuenta" value="editor"> Editor</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="boton-registro boton-vistoso">Crear Cuenta</button>
+                        <p id="mensaje-error-registro" style="color: red; display: none;"></p>
+                    </form>
+                    <div class="ir-a-sesion">
+                        ¿Ya tienes cuenta? <button class="boton-alternativo" onclick="mostrarInicioSesion()">Iniciar Sesión</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Explora el saber <a href="#">(Contacto)</a></p>
+        </footer>
+    </div>
+
+    <script src="scriptInicio_de_sesion.js"></script>
+</body>
+</html>

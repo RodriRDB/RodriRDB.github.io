@@ -1,0 +1,250 @@
+/* RESET Y GENERALES */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER Y NAVEGACIÓN */
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo, .logo-y-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img, .logo-contenedor img {
+    height: 50px;
+    max-width: 150px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+}@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .barra-busqueda {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* BARRA DE BÚSQUEDA */
+
+.barra-busqueda {
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.barra-busqueda input[type="text"] {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barra-busqueda button {
+    padding: 6px 12px;
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.barra-busqueda button:hover {
+    background-color: #16a085;
+}
+
+/*  formulariu */
+   .container {
+    max-width: 960px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  h1, h2 {
+    color: #00796b;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #00695c;
+    text-decoration: underline;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  .form-reclamacion {
+    margin-top: 2rem;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group.full {
+    grid-column: 1 / -1;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  
+  input,
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fdfdfd;
+    transition: border 0.2s ease;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #009688;
+    outline: none;
+  }
+  
+  .btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #004d40;
+  }
+
+/* PIE DE PÁGINA */
+
+   footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .barra-busqueda {
+      width: 100%;
+      margin: 10px 0;
+      flex-direction: column;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .barra-busqueda input[type="text"] {
+        width: 100%;
+      }
+    
+      .barra-busqueda button {
+        width: 100%;
+    }
+}

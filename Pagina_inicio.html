@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora el Saber - Página de Inicio</title>
+    <link rel="stylesheet" href="StylesPaginaInicio.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado-contenedor">
+            <div class="logo-y-titulo">
+                <img src="Img-PaginaInicio/logo.png" alt="Logo de Explora el Saber">
+                <h1 class="titulo-pagina">Explora el Saber</h1>
+            </div>
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Escribe el nombre del libro o revista" class="buscador">
+                <button type="submit">Buscar</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Pagina_inicio.html">Inicio</a></li>
+                <li><a href="diccionarios.html">Diccionarios</a></li>
+                <li><a href="editorial.html">Editoriales</a></li>
+                <li><a href="enciclopedias.html">Enciclopedias</a></li>
+                <li><a href="libreria.html">Librerías</a></li>
+                <li><a href="inicio_sesion.html">👤 Acceso</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <img src="Img-PaginaInicio/banner.jpg" alt="Banner de Bienvenida">
+            <div class="mensaje-banner">
+                <h2>Explora el Saber</h2>
+                <p>Tu punto de encuentro para el estudio y el conocimiento.</p>
+            </div>
+        </section>
+
+        <h1 id="saludo"></h1>
+
+        <section class="bienvenida">
+            <h2>Bienvenido al Portal del Conocimiento</h2>
+            <p>
+                Este sitio está diseñado especialmente para estudiantes. Podrás acceder a una amplia variedad de recursos esenciales para tu aprendizaje: diccionarios para resolver dudas lingüísticas, enciclopedias para profundizar en cualquier tema, información sobre editoriales y enlaces a librerías destacadas.
+            </p>
+            <div class="cta">
+                <a href="diccionarios.html" class="boton-cta">Ver Diccionarios</a>
+                <a href="editorial.html" class="boton-cta">Explorar Editorial</a>
+            </div>
+        </section>
+
+        <section class="carrusel-seccion">
+            <div class="carrusel-contenedor">
+                <div class="carrusel-slides">
+                    <div class="carrusel-slide" style="background-image: url('IMG-InicioSesion/Carrusel1.webp');">
+                        <div class="carrusel-contenido">
+                            <h3>Diccionarios</h3>
+                            <p>Encuentra definiciones precisas y amplía tu vocabulario</p>
+                            <a href="diccionarios.html" class="carrusel-boton">Explorar Diccionarios</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-slide" style="background-image: url('IMG-InicioSesion/Carrusel2.jpg');">
+                        <div class="carrusel-contenido">
+                            <h3>Enciclopedias</h3>
+                            <p>Profundiza en cualquier tema con información completa</p>
+                            <a href="enciclopedias.html" class="carrusel-boton">Ver Enciclopedias</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-slide" style="background-image: url('IMG-InicioSesion/Carrusel3.avif');">
+                        <div class="carrusel-contenido">
+                            <h3>Editoriales</h3>
+                            <p>Conoce las mejores casas editoriales del mundo</p>
+                            <a href="editorial.html" class="carrusel-boton">Explorar Editoriales</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-slide" style="background-image: url('IMG-InicioSesion/Carrusel4.webp');">
+                        <div class="carrusel-contenido">
+                            <h3>Librerías</h3>
+                            <p>Encuentra dónde conseguir tus libros favoritos</p>
+                            <a href="libreria.html" class="carrusel-boton">Ver Librerías</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-slide" style="background-image: url('IMG-InicioSesion/Carrusel5.webp');">
+                        <div class="carrusel-contenido">
+                            <h3>Recursos</h3>
+                            <p>Todo lo que necesitas para tu aprendizaje</p>
+                            <a href="#" class="carrusel-boton">Ver Todos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenido-destacado">
+            <h2>Acceso Rápido a Recursos Clave</h2>
+            <div class="seccion-destacada">
+                <a href="diccionarios.html">
+                    <img src="Img-PaginaInicio/diccionario.jpg" alt="Diccionario Español">
+                    <h3>Diccionario Español</h3>
+                </a>
+            </div>
+            <div class="seccion-destacada">
+                <a href="enciclopedias.html">
+                    <img src="Img-PaginaInicio/enciclopedia.jpg" alt="Enciclopedias">
+                    <h3>Enciclopedias</h3>
+                </a>
+            </div>
+            <div class="seccion-destacada">
+                <a href="libreria.html">
+                    <img src="Img-PaginaInicio/libreria.jpg" alt="Librerías">
+                    <h3>Librerías</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Explora el Saber. <a href="contacto.html">Contacto</a> | <a href="#">Redes Sociales</a></p>
+    </footer>
+
+    <!-- JavaScript de pagina de inicio -->
+    <script src="scriptPaginaInicio.js"></script>
+</body>
+</html>

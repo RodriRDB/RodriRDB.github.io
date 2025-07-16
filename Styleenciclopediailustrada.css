@@ -1,0 +1,441 @@
+/* Variables CSS */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #34495e;
+    --color-accento: #1abc9c;
+    --color-texto: #2c2c2c;
+    --color-fondo: #f8f8f2;
+    --color-borde: #b8a99d;
+    --color-blanco: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+    --transicion: all 0.4s ease;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 30px var(--color-sombra);
+}
+
+/* Encabezado con efecto parallax */
+.encabezado {
+    background: url('Imagenes/logo3.jpeg') center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideDown 1s ease-out;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-y-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    transform: translateY(0);
+    transition: var(--transicion);
+}
+
+.encabezado:hover .logo-y-titulo {
+    transform: translateY(-10px);
+}
+
+.logo-contenedor img {
+    height: 120px;
+    width: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    transition: var(--transicion);
+}
+
+.logo-contenedor img:hover {
+    transform: rotate(5deg) scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+}
+
+.titulo-contenedor h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: var(--color-blanco);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.titulo-contenedor h2 {
+    margin: 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #d3d3d3;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Navbar CSS puro */
+.navbar {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(26, 188, 156, 0.3);
+    transition: var(--transicion);
+    display: block;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--color-accento);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fecha actual */
+.fecha-seccion {
+    text-align: right;
+    padding: 10px 30px;
+    font-size: 0.9em;
+    color: #777;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Ilustradas Section */
+.ilustradas-section {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-centrado {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--color-primario);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.titulo-centrado::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--color-accento);
+}
+
+.ilustradas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px var(--color-sombra);
+}
+
+.grid-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-contenido {
+    padding: 15px;
+    background: var(--color-blanco);
+}
+
+.grid-contenido h3 {
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.grid-contenido p {
+    font-size: 0.9rem;
+    color: var(--color-texto);
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transicion);
+    padding: 15px;
+    text-align: center;
+}
+
+.grid-item:hover .grid-overlay {
+    opacity: 1;
+}
+
+.grid-overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.enlace-plataforma {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--color-accento);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transicion);
+}
+
+.enlace-plataforma:hover {
+    background: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background: var(--color-blanco);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primario);
+    transition: var(--transicion);
+}
+
+.modal-cerrar:hover {
+    color: var(--color-accento);
+}
+
+.modal-imagen {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal-contenido h3 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.modal-contenido p {
+    font-size: 1rem;
+    color: var(--color-texto);
+    margin-bottom: 15px;
+}
+
+/* Footer CSS puro */
+footer {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: 60px 30px 30px;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-seccion h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-seccion h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accento);
+}
+
+.footer-seccion p, .footer-seccion a {
+    opacity: 0.9;
+    color: #e0e0e0;
+    transition: var(--transicion);
+}
+
+.footer-seccion a {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-seccion a:hover {
+    color: var(--color-accento);
+    transform: translateX(5px);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Animaciones CSS puro */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ilustradas-section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .titulo-contenedor h1 {
+        font-size: 2.2rem;
+    }
+
+    .titulo-contenedor h2 {
+        font-size: 1.3rem;
+    }
+
+    .nav-lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .modal-imagen {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-contenedor h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-contenedor img {
+        height: 80px;
+    }
+
+    .grid-imagen {
+        height: 150px;
+    }
+
+    .modal-imagen {
+        height: 150px;
+    }
+}

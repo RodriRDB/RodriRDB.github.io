@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el Saber: Descubre y compara catálogos de libros para comenzar tu aventura lectora.">
+    <title>Editorial: Explora el Saber</title>
+    <link rel="stylesheet" href="Styleeditorial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Explora el Saber</h1>
+                <p>Tu guía para el mundo de los libros</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="pagina_inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="diccionarios.html"><i class="fas fa-book"></i> Diccionarios</a></li>
+                    <li><a href="editorial.html" class="active"><i class="fas fa-pen-nib"></i> Editoriales</a></li>
+                    <li><a href="enciclopedias.html"><i class="fas fa-book-open"></i> Enciclopedias</a></li>
+                    <li><a href="libreria.html"><i class="fas fa-store"></i> Librerías</a></li>
+                    <li><a href="inicio_sesion.html"><i class="fas fa-user"></i> Acceso</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-social">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h2>Comienza tu aventura lectora</h2>
+                    <p>Explora catálogos de libros y encuentra el perfecto para ti.</p>
+                    <a href="#contenido" class="boton pulse-animation">Descubre Ahora</a>
+                </div>
+            </section>
+
+            <div id="contenido" class="content-container">
+                <section class="section intro">
+                    <h2>¿Por qué leer?</h2>
+                    <p>Los libros abren puertas a nuevos mundos, despiertan la imaginación y enriquecen la mente. ¡Empieza tu viaje hoy!</p>
+                    <div class="image-gallery">
+                        <img src="Img-editorial/leer-libro.webp" alt="Libro abierto" class="image">
+                    </div>
+                </section>
+
+                <section class="section catalogos">
+                    <h2>Explora Catálogos de Editoriales</h2>
+                    <p>Selecciona entre nuestras editoriales destacadas para descubrir libros que te inspirarán.</p>
+                    <div class="catalogos-grid">
+                        <div class="catalogo-card">
+                            <h3>Planeta</h3>
+                            <p><strong>Géneros:</strong> Novela, No Ficción, Juvenil</p>
+                            <p><strong>Rango de Precios:</strong> $10 - $30</p>
+                            <p><strong>Pros:</strong> Amplia variedad, bestsellers populares</p>
+                            <p><strong>Contras:</strong> Precios algo elevados</p>
+                        </div>
+                        <div class="catalogo-card">
+                            <h3>Penguin Random House</h3>
+                            <p><strong>Géneros:</strong> Clásicos, Ficción, Infantil</p>
+                            <p><strong>Rango de Precios:</strong> $8 - $25</p>
+                            <p><strong>Pros:</strong> Clásicos accesibles, ediciones de calidad</p>
+                            <p><strong>Contras:</strong> Menos enfoque en autores nuevos</p>
+                        </div>
+                        <div class="catalogo-card">
+                            <h3>Alfaguara</h3>
+                            <p><strong>Géneros:</strong> Literatura Latinoamericana, Poesía</p>
+                            <p><strong>Rango de Precios:</strong> $12 - $28</p>
+                            <p><strong>Pros:</strong> Enfoque en cultura local, autores reconocidos</p>
+                            <p><strong>Contras:</strong> Catálogo más especializado</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section comparador-arreglos">
+                    <h2>Compara Catálogos</h2>
+                    <p>Elige dos catálogos para comparar su cantidad de libros y precio promedio.</p>
+                    <div class="comparator-form">
+                        <div class="input-group">
+                            <label for="catalogo1">Catálogo 1</label>
+                            <select id="catalogo1" aria-label="Primer catálogo de libros">
+                                <option value="">Selecciona un catálogo</option>
+                                <option value="planeta">Planeta</option>
+                                <option value="penguin">Penguin Random House</option>
+                                <option value="alfaguara">Alfaguara</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="catalogo2">Catálogo 2</label>
+                            <select id="catalogo2" aria-label="Segundo catálogo de libros">
+                                <option value="">Selecciona un catálogo</option>
+                                <option value="planeta">Planeta</option>
+                                <option value="penguin">Penguin Random House</option>
+                                <option value="alfaguara">Alfaguara</option>
+                            </select>
+                        </div>
+                        <button onclick="compararCatalogos()">Comparar</button>
+                        <p id="resultado-comparacion" aria-live="polite"></p>
+                    </div>
+                </section>
+
+                <section class="section beneficios">
+                    <h2>Beneficios de Leer</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-brain"></i>
+                            <h3>Concentración</h3>
+                            <p>Mejora tu enfoque y reduce distracciones.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-language"></i>
+                            <h3>Lenguaje</h3>
+                            <p>Amplía tu vocabulario y expresión.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Empatía</h3>
+                            <p>Conecta con historias y emociones.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Imaginación</h3>
+                            <p>Despierta tu creatividad.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section cta-section">
+                    <h2>Encuentra tu libro ideal</h2>
+                    <p>Explora nuestro catálogo y comienza a leer hoy. ¡Cada página es una nueva aventura!</p>
+                    <a href="libreria.html" class="boton bounce-animation">Ver Libros Gratuitos</a>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <p>info@explorarsaber.com</p>
+                        <p>+51 123 456 789</p>
+                        <p>Arequipa, Perú</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <p><a href="blog.html">Blog</a></p>
+                        <p><a href="#top">Volver al inicio</a></p>
+                        <p><a href="#">Política de Privacidad</a></p>
+                    </div>
+                </div>
+                <p class="footer-copy">© 2025 Editorial Explora el Saber. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript para editoriales -->
+    <script src="script-editorial.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Explora el saber</title>
+    <link rel="stylesheet" href="StylesReclamaciones.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagenes/logo.png" alt="Logo de Explora el saber">
+            <h1>Explorar el saber</h1>
+        </div>
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Escribe el nombre del libro o revista">
+            <button type="submit">Buscar</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pagina_inicio.html">Inicio</a></li>
+                <li><a href="diccionarios.html">Diccionarios</a></li>
+                <li><a href="editorial.html">Editoriales</a></li>
+                <li><a href="enciclopedias.html">Enciclopedias</a></li>
+                <li><a href="libreria.html">Librerías</a></li>
+                <li><a href="inicio_sesion.html">Acceso</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Libro de reclamaciones</h1>
+        <p>¡Hola! Si tienes cualquier consulta o requieres una atención inmediata, te invitamos a usar nuestro canal de atención: central telefónica 206-4900 anexo 100 o a <a href="mailto:atencionalcliente@sbs.com.pe">atencionalcliente@sbs.com.pe</a>.</p>
+        <p><strong>RECLAMO:</strong> Disconformidad relacionada a los productos o servicios.</p>
+        <p><strong>QUEJA:</strong> Disconformidad no relacionada a los productos o servicios o malestar respecto a la atención al público.</p>
+    
+        <h2>Información del reclamante</h2>
+    
+        <form class="form-reclamacion">
+          <div class="form-grid">
+    
+            <div class="form-group">
+              <label>Tipo de documento*</label>
+              <select required>
+                <option>Seleccione</option>
+                <option>DNI</option>
+                <option>CE</option>
+                <option>Pasaporte</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <label>Número*</label>
+              <input type="text" placeholder="Ejm. 12345678" required />
+            </div>
+    
+            <div class="form-group">
+              <label>Nombres*</label>
+              <input type="text" placeholder="Ejm. Ana Patricia" required />
+            </div>
+    
+            <div class="form-group">
+              <label>Apellidos*</label>
+              <input type="text" placeholder="Ejm. Pérez Vargas" required />
+            </div>
+    
+            <div class="form-group">
+              <label>Teléfono celular*</label>
+              <input type="tel" placeholder="Ejm. 999 123 123" required />
+            </div>
+    
+            <div class="form-group">
+              <label>Otro número</label>
+              <input type="tel" placeholder="Ejm. 054 123123" />
+            </div>
+    
+            <div class="form-group">
+              <label>Departamento*</label>
+              <select id="departamento" required></select>
+                <option>Seleccione</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <label>Provincia*</label>
+              <select id="provincia" required></select>
+                <option>Seleccione</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <label>Distrito*</label>
+              <select id="distrito" required></select>
+                <option>Seleccione el Distrito</option>
+              </select>
+            </div>
+    
+            <div class="form-group full">
+              <label>Dirección*</label>
+              <input type="text" placeholder="Ejm. Av. Independencia 101" required />
+            </div>
+    
+          </div>
+    
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </main>
+
+    <footer>
+        <p>© 2025 Explora el saber. <a href="contacto.html">Contacto</a> | <a href="#">Redes Sociales</a></p>
+    </footer>
+
+    <!-- JavaScript para el libro de reclamaciones -->
+    <script src="script-libroReclamaciones.js"></script>
+
+</body>

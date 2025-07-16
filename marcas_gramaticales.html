@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el Saber: Descubre las marcas gramaticales de palabras en español.">
+    <title>Marcas Gramaticales - Explora el Saber</title>
+    <link rel="stylesheet" href="Stylemarcas_gramaticales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="logo-y-titulo">
+                <div class="logo-contenedor">
+                    <img src="img/logo.png" alt="Logo Real Academia Española" class="logo-rae">
+                </div>
+                <div class="titulo-contenedor">
+                    <h1>Explora el Saber</h1>
+                    <h2>Marcas Gramaticales</h2>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-lista">
+                    <li class="nav-item"><a href="Pagina_inicio.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="diccionarios.html" class="nav-link">Diccionarios</a></li>
+                    <li class="nav-item"><a href="editorial.html" class="nav-link">Editoriales</a></li>
+                    <li class="nav-item"><a href="enciclopedias.html" class="nav-link">Enciclopedias</a></li>
+                    <li class="nav-item"><a href="libreria.html" class="nav-link">Librerías</a></li>
+                    <li class="nav-item"><a href="inicio_sesion.html" class="nav-link">Acceso</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="fecha-seccion">
+            <span id="fecha-actual">Fecha: 02/07/2025</span>
+        </div>
+
+        <main>
+            <section class="marcas-gramaticales-section">
+                <div class="marcas-gramaticales-grid">
+                    <div class="palabras-panel">
+                        <h2>Palabras A-Z</h2>
+                        <div class="buscador">
+                            <input type="text" id="buscar-palabra" placeholder="Busca una palabra..." aria-label="Buscar palabra para sus marcas gramaticales">
+                            <i class="fas fa-search buscador-icono"></i>
+                        </div>
+                        <div id="lista-palabras" class="lista-palabras"></div>
+                        <div class="paginacion">
+                            <button id="anterior" onclick="cambiarPagina(-1)" disabled>Anterior</button>
+                            <span id="pagina-actual">Página 1</span>
+                            <button id="siguiente" onclick="cambiarPagina(1)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div class="marcas-panel">
+                        <h2>Marcas Gramaticales</h2>
+                        <div id="marcas-contenido" class="marcas-contenido" aria-live="polite">
+                            <p>Selecciona una palabra para ver sus marcas gramaticales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h4>Explora el Saber</h4>
+                    <p>Tu portal de referencia para la lengua española y sus recursos lexicográficos.</p>
+                </div>
+                <div class="footer-seccion">
+                    <h4>Enlaces útiles</h4>
+                    <a href="https://www.rae.es/">Real Academia Española</a>
+                    <a href="https://www.asale.org/">ASALE</a>
+                    <a href="https://www.cervantes.es/">Instituto Cervantes</a>
+                </div>
+                <div class="footer-seccion">
+                    <h4>Contacto</h4>
+                    <a href="mailto:info@exploraelsaber.com">info@exploraelsaber.com</a>
+                    <a href="tel:+34912345678">+34 912 345 678</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2005-2025 Explora el Saber. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript para las marcas gramaticales -->
+    <script src="script-marcas-gramaticales.js"></script>
+
+</body>
+</html>
