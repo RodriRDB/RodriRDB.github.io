@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Store logged-in user info
             localStorage.setItem('currentUser', JSON.stringify(user));
             // Redirect to pagina inicio
-            window.location.href = 'Pagina_inicio.html';
+            window.location.href = 'index.html';
         } else {
             loginError.textContent = 'Usuario o contraseña incorrectos.';
             loginError.style.display = 'block';
